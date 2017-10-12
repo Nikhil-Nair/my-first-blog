@@ -3,20 +3,13 @@
         <title>My blog</title>
     </head>
     <body>
-        <div>
-            <h1><a href="/">My Blog</a></h1>
-        </div>
+        {% for post in posts %}
+          <div>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>Published: {{ post.published_date }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Some random text here.</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Yet more random text here.</p>
-        </div>
     </body>
 </html>
